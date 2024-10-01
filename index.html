@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StegoApp: Hide your secret messages inside pictures</title>
+    <meta name="description" content="Use StegoApp to easily hide and extract messages from images. Steganography encoder and decoder. Steganography tool. Steganography image decoder for PNG and JPG files. Secure your secrets online with ease.">
+    <meta name="keywords" content="steganography, hide messages in images, secure image messaging, StegoApp, extract hidden messages, steganography decoder, steganography tools, steganography tool, steganography online, steganography image decoder, image steganography decoder, steganography decoder png, steganography decoder jpg, stego online">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="64x64">
+    <script src="pyodide-0.26.2/pyodide.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="#" id="info-link" class="info-link" title="Information">
+           <img src="images/info.png" alt="Info Icon" class="icon-img">
+        </a>
+
+        <div id="container-info"></div>
+        <div class='canvas-container'>
+           <canvas class="hacker-image" id="cover-image"></canvas>
+        </div>
+
+        <h1 id='info' class="info">Hide your secrets into images</h1>
+        <h2 id='log' class="log"></h2>
+        <center><img id='loading' class='loading' src='images/loading.gif' alt='Loaded image'/></center>
+
+        <div class="button-container">
+            <textarea id='message' class="textarea-input" placeholder="Enter your message here..."></textarea>
+            <label for="upload-button" id='upload-button-label' class="upload-button-label">Upload image</label>
+            <input type="file" id="upload-button" name="upload-button" accept="image/*">
+            <button id="download-button" class="action-button">Download image</button>
+
+            <select id='method' class="select">
+               <option id="R01">Robust steganography</option>
+            </select>
+
+            <input type="password" id='password' class="password" placeholder="Password">
+            <button id="next-button" class="action-button">Next</button>
+            <button id="hide-button" class="action-button">Hide message</button>
+            <button id="hide2-button" class="action-button">Hide message</button>
+            <button id="extract-button" class="action-button">Extract message</button>
+            <button id="extract2-button" class="action-button">Extract message</button>
+            <div id='navigation' class="restart-back-container">
+               <button id="back-button" class="action-button small-button">&lArr; Back</button>
+               <button id="restart-button" class="action-button small-button">&#8635; Restart</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="cookie-banner" class="cookie-container">
+
+       <p>This site uses cookies to improve user experience and analyze traffic. <a href="/cookie-policy" style="color: #FFD700;">Learn more</a>.</p>
+       <button id="reject-cookies" class="action-button cookie-button">Reject</button>
+       <button id="accept-cookies" class="action-button cookie-button">Accept</button>
+    </div>
+
+
+    <script src="script.js"></script> 
+</body>
+</html>
+
