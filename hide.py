@@ -2,6 +2,7 @@ import sys
 from stegoapp import *
 
 image = base64_to_image(g_image_url)
+image = resize(image)
 I = np.array(image)
 
 if capacity(I.shape) < len(encode(g_message)):
