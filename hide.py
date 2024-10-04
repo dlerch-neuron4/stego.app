@@ -5,7 +5,7 @@ image = base64_to_image(g_image_url)
 image = resize(image)
 I = np.array(image)
 
-if capacity(I.shape) < len(encode(g_message)):
+if capacity(I.shape) < len(encode(g_message, g_password)):
     print("ERROR: Message too long")
     g_b64image = 'ERR_TOO_LONG'
     sys.exit(0)
